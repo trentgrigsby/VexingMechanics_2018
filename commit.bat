@@ -1,3 +1,3 @@
 cd c:\RobotC
 
-git commit .
+git commit . -m "Simple commit"
