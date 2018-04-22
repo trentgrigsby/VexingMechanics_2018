@@ -1,3 +1,3 @@
 cd c:\RobotC
 
-git pull .
+git pull origin
