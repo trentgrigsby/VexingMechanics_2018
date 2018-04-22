@@ -1,4 +1,3 @@
 cd c:\RobotC
 
-git add .
-
+git pull .
