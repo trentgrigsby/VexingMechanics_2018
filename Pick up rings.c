@@ -113,41 +113,41 @@ task main()
 
 	/*waitUntil(getTouchLEDValue(Led)==true);
 
-	setMotor(slideMotor,-100);
+	setTouchLEDColor(Led,colorViolet);
 
-	sleep(700);
+	setMotor(slideMotor,100);
+
+	forward(6500, milliseconds,100);
 
 	stopAllMotors();
 
-	forward(2500,degrees,100);
-	*/
-	waitUntil(getTouchLEDValue(Led)==true);
+	setMotor(slideMotor,-100);
 
-	setTouchLEDColor(Led,colorViolet);
+	sleep(675);
 
-	setMotor(slideMotor,60);
+	stopAllMotors();
 
-	forward(6.2,seconds,100);
-
-	setMotor(slideMotor,-80);
+	forward(950,milliseconds,50);
 
 	sleep(500);
 
-	stopAllMotors();
+	backward(500,milliseconds,50);
 
-	forward(600,milliseconds,75);
-
-	backward(700,milliseconds,75);
-
-	setMotor(slideMotor,-80);
+	setMotor(slideMotor,-100);
 
 	sleep(1400);
 
 	stopAllMotors();
 
-	forward(600,milliseconds,75);
+	forward(650,milliseconds,50);
 
-	backward(400,milliseconds,100);
+	backward(700,milliseconds,100);
+
+	setMotorBrakeMode(leftMotor,motorCoast);
+	setMotorBrakeMode(rightMotor,motorCoast);
+	setMotorBrakeMode(armLift2,motorCoast);
+	setMotorBrakeMode(armLift,motorCoast);
+	setMotorBrakeMode(slideMotor,motorCoast);
 
 	waitUntil(getTouchLEDValue(Led)==true);
 
@@ -170,14 +170,14 @@ task main()
 	setMotorBrakeMode(slideMotor,motorCoast);
 
 	setTouchLEDColor(Led,colorRed);
-
+*/
 	waitUntil(getTouchLEDValue(Led)==true);
 
 	setTouchLEDColor(Led,colorBlue);
 
 	resetGyro(horizontalGyro);
 
-	backward(940,degrees,75); //Moving backward to blue rings.
+	backward(1100,degrees,75); //Moving backward to blue rings.
 
 	repeatUntil(getGyroDegrees(horizontalGyro)>=90) //Spinnig so clamps are pointed at Blue Peg.
 	{
@@ -194,7 +194,7 @@ task main()
 
 	setMotor(armLift,100);
 
-	backward(340,degrees,95); //Backing up into blue rings
+	backward(340,degrees,100); //Backing up into blue rings
 
 	sleep(750);
 
@@ -218,7 +218,7 @@ task main()
 
 	resetGyro(horizontalGyro);
 
-	repeatUntil(getGyroDegrees(horizontalGyro)>=165) //Turning so that the ring clamps are facing the poles.
+	repeatUntil(getGyroDegrees(horizontalGyro)>=170) //Turning so that the ring clamps are facing the poles.
 	{
 		setMotor(leftMotor,-50);
 
@@ -247,7 +247,7 @@ task main()
 	stopAllMotors();
 
 
-	repeatUntil(getGyroDegrees(horizontalGyro)>=160) //Turning so that the ring clamps are facing the poles.
+	repeatUntil(getGyroDegrees(horizontalGyro)>=170) //Turning so that the ring clamps are facing the poles.
 	{
 		setMotor(leftMotor,-50);
 
